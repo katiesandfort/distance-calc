@@ -1,8 +1,7 @@
 const path = require('path'); 
 const HtmlWebpackPlugin = require('html-webpack-plugin'); 
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-
-// console.log('process.env.NODE_ENV in webpack.config is ', process.env); 
 
 module.exports = {
   mode:  process.env.NODE_ENV, //sets the mode for webpack to determine how it optimizes the bundles
@@ -24,16 +23,20 @@ module.exports = {
       {
         test: /\.s[ac]ss/, //.sass or .scss 
         use: [ 
-          'style-loader', 'css-loader', 'sass-loader'
+          "style-loader", 'css-loader', 'sass-loader'
         ] 
+      },
+      {
+        test: /\.(png|jpg|gif)$/i,
+        use: [ 'file-loader',
+        ],
       }
     ]
   }, 
   plugins: [ new HtmlWebpackPlugin({
     title: 'Development',
     template: 'index.html'
-   }), 
-
+   })
 ], 
   devServer: { 
     proxy: {
