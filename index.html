@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <title>Distance Calculator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Quattrocento&family=Quattrocento+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
   integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
   crossorigin=""/>
@@ -19,18 +22,28 @@
   <script src="https://unpkg.com/esri-leaflet-geocoder"></script>
 </head>
 <body>
-  <h1>Distance Calculator</h1>
-  <p>In order to calculate the distance between two points, input the coordinates for your respective points in the form below. The coordinates are expected to be latitude and longitude (both in decimal form) separated by a comma.</p>
-  <form id="form">
-    <input type="text" label="pointA" id="pointA" placeholder="Point A">
-    <input type="text" label="pointB" id="pointB" placeholder="Point B">
-    <input type="submit" id="calcButton" value="Calculate Distance">
-  </form>
-  <div class="distance">
-    <p>Distance: </p>
-    <p id="distance"></p>
-  </div>
-  <div id="map"></div>
+  <div class="container">
+    <div class="div1" id="title">
+      <h1>Distance Calculator</h1>
+    </div>
+    <div class="div2" id="description">
+      <p>In order to calculate the distance between two points, input the coordinates for your respective points in the form below. The coordinates are expected to be latitude and longitude (both in decimal form) separated by a comma. You can also click on the map to set your points and calculate the distance.</p>
+    </div>
+    <div class="div3">
+      <p>Input locations here!</p>
+      <br>
+      <form id="form">
+        <input type="text" label="pointA" id="pointA" placeholder="Point A">
+        <input type="text" label="pointB" id="pointB" placeholder="Point B">
+        <input type="submit" id="calcButton" value="Calculate Distance">
+      </form>
+    </div>
+    <div class="div4">
+      <h3>Distance: <h3>
+      <h3 id="distance"></h3>
+    </div>    
+</div>
+<div id="map"></div>
   <script src="build/bundle.js"></script>
 </body>
 

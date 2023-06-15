@@ -5,26 +5,6 @@ import styles from './scss/application.scss';
 const map = L.map('map').setView([47.6777, -122.338], 11);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map)
 
- // create the geocoding control and add it to the map
-//  var searchControl = L.esri.Geocoding.geosearch({
-//   providers: [
-//     L.esri.Geocoding.arcgisOnlineProvider({
-//       // API Key to be passed to the ArcGIS Online Geocoding Service
-//       apikey: 'YOUR_API_KEY'
-//     })
-//   ]
-// }).addTo(map);
-
-// // create an empty layer group to store the results and add it to the map
-// var results = L.layerGroup().addTo(map);
-
-// // listen for the results event and add every result to the map
-// searchControl.on("results", function (data) {
-//   results.clearLayers();
-//   for (var i = data.results.length - 1; i >= 0; i--) {
-//     results.addLayer(L.marker(data.results[i].latlng));
-//   }
-// });
 
 //initialize variables
 let startPoint;
@@ -88,6 +68,9 @@ form.addEventListener('submit', (e) => {
   
   //get distance
   getDistance(startPoint, endPoint);
+
+  //clear form
+  form.reset();
 })
 
 //extra functionality for clicking map
