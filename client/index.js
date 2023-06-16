@@ -19,7 +19,7 @@ function getDistance(start, end) {
   }).addTo(map);
   let length = map.distance(start, end);
   length = length/1000
-  document.getElementById("distance").innerHTML = `${length.toFixed(2)}km`;
+  document.getElementById("distance").innerText = `\u00A0${length.toFixed(2)}km`;
 }
 
 function placeMarker(point) {
@@ -50,6 +50,7 @@ form.addEventListener('submit', (e) => {
 
   //format starting point
   const pointAArr = stringA.split(',');
+
   startPoint = {
     lat: pointAArr[0],
     lng: pointAArr[1]
@@ -57,6 +58,7 @@ form.addEventListener('submit', (e) => {
 
   //formate ending point
   const pointBArr = stringB.split(',');
+
   endPoint = {
     lat: pointBArr[0],
     lng: pointBArr[1]
@@ -66,6 +68,12 @@ form.addEventListener('submit', (e) => {
   markerA = placeMarker(startPoint);
   markerB = placeMarker(endPoint);
   
+  //center map on new markers
+  map.fitBounds([[pointAArr],[pointBArr]], {
+    maxZoom: 9,
+    duration: 1
+  });
+
   //get distance
   getDistance(startPoint, endPoint);
 

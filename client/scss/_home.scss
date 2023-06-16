@@ -1,63 +1,104 @@
-body {
-  background-color: $rose;
-  color: $scarlet;
-}
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   text-align: center;
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
+}
+body {
+  background-color: $lightBlue;
+  color: $scarlet;
+  padding: 0px 5%;
+}
+h1, h2, h3, h4 {
+  font-family: 'DM Serif Display', serif;
 }
 h1 {
-font-family: 'Oswald', sans-serif;
-font-size: 48px;
+  font-size: 64px;
 }
-.container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  }
-  
-.div1 { 
-  grid-area: 1 / 1 / 3 / 3; 
-  background-color: $lightBlue;
-}
-.div2 { 
-  grid-area: 1 / 3 / 3 / 5; 
-  background-color: $rose;
-}
-.div3 { 
-  grid-area: 3 / 1 / 5 / 3; 
-  background-color: $peach;
-}
-.div4 { 
-  grid-area: 3 / 3 / 5 / 5; 
-  background-color: $brass;
-  color: $peach;
-  // height: 80px;
-  // font-size: 32px;
-}
-#send {
-  height: 20px;
-
+h2 {
+  font-size: 48px;
 }
 h3 {
   font-size: 32px;
 }
+h4 {
+  font-size: 24px;
+}
+p {
+  font-size: 18px;
+  text-align: center;
+}
+input {
+  border: 1px solid $plum;
+  border-radius: 5px;
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin: 5px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}  
+.div1 { 
+  grid-area: 1 / 1 / 2 / 5;  
+  background-color: $lightBlue;
+}
+.div2 { 
+  grid-area: 2 / 1 / 4 / 3; 
+  background-color: $rose;
+  color: $plum;
+}
+.div3 { 
+  grid-area: 2 / 3 / 4 / 5; 
+  background-color: $peach;
+  color: $plum;
+}
+.div4 { 
+  grid-area: 4 / 1 / 6 / 3;
+  background-color: $brass;
+  color: $peach;
+}
+.div5 { 
+  grid-area: 4 / 3 / 6 / 5;
+  background-color: $rose;
+}
+.the {
+  font-family: 'DM Serif Display', serif;
+  font-size: 30px;
+}
+.center {
+  width: 70%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.form{
+  width: 80%;
+  margin: 0 auto;
+}
+#distance {
+  transform: skew(-8deg);
+  background: $lightBlue;
+}
 #map {
-  margin: .5vh auto;
-  height: 80vh; 
-  width: 160vh;
-  border: 2px solid $blue;
+  height: 50vh; 
+  border: 0px solid $lightBlue;
 }
 #calcButton {
+  border: 5px solid $brass;
+  font-weight: bold;
   background-color: $brass;
-  color: $scarlet;
+  color: $peach;
 }
 #calcButton:hover {
-  background-color: $scarlet;
-  color:  $peach;
+  border: 5px solid $brass;
+  background-color: $peach;
+  color: $brass;
 }
