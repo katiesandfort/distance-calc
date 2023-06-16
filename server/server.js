@@ -5,8 +5,6 @@ const path = require('path');
 
 app.use(express.json());
 
-//statically server evertying in the assets folder
-app.use('/assets', express.static(path.join(__dirname, '../assets')));
 // statically serve everything in the build folder on the route '/build'
 app.use('/build', express.static(path.join(__dirname, '../build')));
 // serve index.html on the route '/'
