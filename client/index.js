@@ -2,7 +2,7 @@
 import styles from './scss/application.scss';
 
 //create map
-const map = L.map('map').setView([47.6777, -122.338], 11);
+const map = L.map('map').setView([47.6777, -122.338], 13);
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map)
 
 

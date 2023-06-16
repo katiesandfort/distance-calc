@@ -28,7 +28,8 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|gif)$/i,
-        use: [ 'file-loader',
+        type: "asset",
+        use: [ 'file-loader'
         ],
       }
     ]
@@ -40,7 +41,7 @@ module.exports = {
 ], 
   devServer: { 
     proxy: {
-      '/api': 'http://localhost:3000'
+      '/': 'http://localhost:3000'
     }
   }
 };

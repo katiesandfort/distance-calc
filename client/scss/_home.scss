@@ -1,6 +1,6 @@
 body {
   background-image: url("../../assets/plane.jpg");
-  background-color: $brass;
+  background-color: $rose;
   color: $scarlet;
 }
 * {
@@ -38,12 +38,20 @@ font-size: 48px;
   grid-area: 3 / 3 / 5 / 5; 
   background-color: $brass;
   color: $peach;
-  height: 80px;
+  // height: 80px;
+  // font-size: 32px;
+}
+#send {
+  height: 20px;
+
+}
+h3 {
   font-size: 32px;
 }
-
 #map {
+  margin: .5vh auto;
   height: 80vh; 
+  width: 160vh;
   border: 2px solid $blue;
 }
 #calcButton {
